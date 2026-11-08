@@ -2,14 +2,13 @@
 
 Aplikasi web **Admin Panel** untuk mengelola data kategori dan produk, serta memantau ringkasan data melalui dashboard. Aplikasi dibuat menggunakan Next.js, TypeScript, Prisma ORM, dan MySQL.
 
-> **Status:** Fitur autentikasi admin, dashboard, dan CRUD kategori serta produk telah diimplementasikan. Sesuaikan bagian screenshot dan detail konfigurasi apabila ada perubahan pada implementasi terakhir.
+> **Status:** Fitur autentikasi admin, dashboard, dan CRUD kategori serta produk telah diimplementasikan. 
 
 ## Daftar Isi
 
 - [Fitur Utama](#fitur-utama)
 - [Teknologi dan Dependency](#teknologi-dan-dependency)
 - [Desain Database](#desain-database)
-- [Screenshot Aplikasi](#screenshot-aplikasi)
 - [Struktur Project](#struktur-project)
 - [Persyaratan](#persyaratan)
 - [Instalasi dan Konfigurasi](#instalasi-dan-konfigurasi)
@@ -150,26 +149,6 @@ erDiagram
 - Tabel `admins` digunakan untuk data akun administrator dan tidak memiliki relasi langsung dengan tabel kategori maupun produk.
 
 Definisi database berada di `prisma/schema.prisma`.
-
-## Screenshot Aplikasi
-
-Tambahkan screenshot aktual aplikasi ke folder `docs/screenshots/` dengan nama file berikut. README ini menggunakan nama file yang disarankan; jika nama file diubah, sesuaikan tautan gambarnya.
-
-### Halaman Login
-
-![Halaman Login](docs/screenshots/login.png)
-
-### Dashboard
-
-![Halaman Dashboard](docs/screenshots/dashboard.png)
-
-### Manajemen Kategori
-
-![Halaman Manajemen Kategori](docs/screenshots/categories.png)
-
-### Manajemen Produk
-
-![Halaman Manajemen Produk](docs/screenshots/products.png)
 
 ## Struktur Project
 
@@ -443,7 +422,3 @@ Beberapa hal yang dapat menjadi pengembangan berikutnya:
 Sebelum melakukan perubahan, periksa terlebih dahulu `package.json`, `prisma/schema.prisma`, dan konfigurasi pada `prisma7.config.ts` agar implementasi baru tetap sesuai dengan versi dependency dan struktur project yang digunakan.
 
 ---
-
-## Lisensi
-
-Tambahkan informasi lisensi sesuai kebijakan pemilik repository. Jika project ini merupakan tugas seleksi atau project internal, pastikan izin publikasi source code sudah sesuai dengan ketentuan pihak terkait.
