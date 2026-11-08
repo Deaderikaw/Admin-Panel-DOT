@@ -226,7 +226,7 @@ export default function ProductsPage() {
 
         <button
           onClick={openAddModal}
-          className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-medium text-white hover:bg-blue-700"
+          className="rounded-lg bg-emerald-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-emerald-700"
         >
           + Tambah Produk
         </button>
@@ -244,19 +244,19 @@ export default function ProductsPage() {
         </div>
       )}
 
-      <div className="flex flex-col gap-3 rounded-xl bg-white p-4 shadow-sm sm:flex-row">
+      <div       className="flex flex-col gap-3 rounded-xl border border-emerald-100/70 bg-white p-4 shadow-sm sm:flex-row">
         <input
           type="text"
           placeholder="Cari nama produk..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="flex-1 rounded-lg border border-gray-300 px-4 py-2 text-sm outline-none focus:border-blue-500"
+          className="flex-1 rounded-lg border border-slate-200 px-4 py-2 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
         />
 
         <select
           value={categoryFilter}
           onChange={(e) => setCategoryFilter(e.target.value)}
-          className="rounded-lg border border-gray-300 px-4 py-2 text-sm outline-none focus:border-blue-500"
+          className="rounded-lg border border-slate-200 px-4 py-2 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
         >
           <option value="">Semua Kategori</option>
           {categories.map((category) => (
@@ -267,10 +267,10 @@ export default function ProductsPage() {
         </select>
       </div>
 
-      <div className="overflow-hidden rounded-xl bg-white shadow-sm">
+      <div className="overflow-hidden rounded-xl border border-emerald-100/70 bg-white shadow-sm">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm">
-            <thead className="bg-gray-50 text-gray-600">
+            <thead className="bg-emerald-50/60 text-slate-500">
               <tr>
                 <th className="px-5 py-4">No.</th>
                 <th className="px-5 py-4">Nama Produk</th>
@@ -324,7 +324,7 @@ export default function ProductsPage() {
                       <div className="flex gap-3">
                         <button
                           onClick={() => openEditModal(product)}
-                          className="font-medium text-blue-600 hover:text-blue-800"
+                          className="font-medium text-emerald-700 hover:text-emerald-800"
                         >
                           Edit
                         </button>
@@ -374,7 +374,7 @@ export default function ProductsPage() {
                   maxLength={150}
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+                  className="w-full rounded-lg border border-slate-200 px-3 py-2 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
                   placeholder="Masukkan nama produk"
                 />
               </div>
@@ -387,7 +387,7 @@ export default function ProductsPage() {
                   required
                   value={form.category_id}
                   onChange={(e) => setForm({ ...form, category_id: e.target.value })}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+                  className="w-full rounded-lg border border-slate-200 px-3 py-2 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
                 >
                   <option value="">Pilih kategori</option>
                   {categories.map((category) => (
@@ -406,7 +406,7 @@ export default function ProductsPage() {
                   rows={3}
                   value={form.description}
                   onChange={(e) => setForm({ ...form, description: e.target.value })}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+                  className="w-full rounded-lg border border-slate-200 px-3 py-2 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
                   placeholder="Deskripsi produk"
                 />
               </div>
@@ -423,7 +423,7 @@ export default function ProductsPage() {
                     required
                     value={form.price}
                     onChange={(e) => setForm({ ...form, price: e.target.value })}
-                    className="w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+                    className="w-full rounded-lg border border-slate-200 px-3 py-2 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
                     placeholder="100000"
                   />
                 </div>
@@ -439,7 +439,7 @@ export default function ProductsPage() {
                     required
                     value={form.stock}
                     onChange={(e) => setForm({ ...form, stock: e.target.value })}
-                    className="w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+                    className="w-full rounded-lg border border-slate-200 px-3 py-2 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
                   />
                 </div>
               </div>
@@ -451,7 +451,7 @@ export default function ProductsPage() {
                 <select
                   value={form.status}
                   onChange={(e) => setForm({ ...form, status: e.target.value })}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+                  className="w-full rounded-lg border border-slate-200 px-3 py-2 outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
                 >
                   <option value="active">Active</option>
                   <option value="inactive">Inactive</option>
@@ -462,14 +462,14 @@ export default function ProductsPage() {
                 <button
                   type="button"
                   onClick={() => setShowModal(false)}
-                  className="rounded-lg border border-gray-300 px-4 py-2 text-sm hover:bg-gray-50"
+                  className="rounded-lg border border-slate-200 px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50"
                 >
                   Batal
                 </button>
                 <button
                   type="submit"
                   disabled={saving}
-                  className="rounded-lg bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-60"
+                  className="rounded-lg bg-emerald-600 px-5 py-2 text-sm font-medium text-white hover:bg-emerald-700 disabled:opacity-60"
                 >
                   {saving ? "Menyimpan..." : "Simpan"}
                 </button>

@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -44,10 +45,17 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gray-100 px-4">
-      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-lg">
+    <main className="flex min-h-screen items-center justify-center bg-[#f6faf7] px-4">
+      <div className="w-full max-w-md rounded-2xl border border-emerald-100 bg-white p-8 shadow-[0_20px_60px_rgba(22,101,52,0.08)]">
         <div className="mb-8 text-center">
-          <h1 className="text-2xl font-bold text-gray-900">
+          <Image
+            src="/logo.png"
+            alt="Logo Admin Panel"
+            width={24}
+            height={24}
+            className="mx-auto mb-4 h-16 w-16 object-contain"
+          />
+          <h1 className="text-2xl font-bold text-slate-900">
             Admin Panel
           </h1>
           <p className="mt-2 text-sm text-gray-500">
@@ -72,7 +80,7 @@ export default function LoginPage() {
               placeholder="admin@example.com"
               autoComplete="username"
               required
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
             />
           </div>
 
@@ -92,7 +100,7 @@ export default function LoginPage() {
               placeholder="Masukkan password"
               autoComplete="current-password"
               required
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
             />
           </div>
 
@@ -105,7 +113,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg bg-blue-600 px-4 py-3 font-medium text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
+            className="w-full rounded-lg bg-emerald-600 px-4 py-3 font-medium text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {loading ? "Memproses..." : "Login"}
           </button>

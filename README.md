@@ -2,22 +2,6 @@
 
 Aplikasi web **Admin Panel** untuk mengelola data kategori dan produk, serta memantau ringkasan data melalui dashboard. Aplikasi dibuat menggunakan Next.js, TypeScript, Prisma ORM, dan MySQL.
 
-> **Status:** Fitur autentikasi admin, dashboard, dan CRUD kategori serta produk telah diimplementasikan. 
-
-## Daftar Isi
-
-- [Fitur Utama](#fitur-utama)
-- [Teknologi dan Dependency](#teknologi-dan-dependency)
-- [Desain Database](#desain-database)
-- [Struktur Project](#struktur-project)
-- [Persyaratan](#persyaratan)
-- [Instalasi dan Konfigurasi](#instalasi-dan-konfigurasi)
-- [Menjalankan Aplikasi](#menjalankan-aplikasi)
-- [Dokumentasi API](#dokumentasi-api)
-- [Autentikasi dan Keamanan](#autentikasi-dan-keamanan)
-- [Panduan Pengembangan](#panduan-pengembangan)
-- [Catatan untuk Developer Selanjutnya](#catatan-untuk-developer-selanjutnya)
-
 ## Fitur Utama
 
 ### 1. Autentikasi Admin
@@ -149,6 +133,26 @@ erDiagram
 - Tabel `admins` digunakan untuk data akun administrator dan tidak memiliki relasi langsung dengan tabel kategori maupun produk.
 
 Definisi database berada di `prisma/schema.prisma`.
+
+## Screenshot Aplikasi
+
+Tambahkan screenshot aktual aplikasi ke folder `docs/screenshots/` dengan nama file berikut. README ini menggunakan nama file yang disarankan; jika nama file diubah, sesuaikan tautan gambarnya.
+
+### Halaman Login
+
+![Halaman Login](docs/screenshots/login.png)
+
+### Dashboard
+
+![Halaman Dashboard](docs/screenshots/dashboard.png)
+
+### Manajemen Kategori
+
+![Halaman Manajemen Kategori](docs/screenshots/categories.png)
+
+### Manajemen Produk
+
+![Halaman Manajemen Produk](docs/screenshots/products.png)
 
 ## Struktur Project
 
@@ -406,9 +410,7 @@ Untuk endpoint yang memerlukan autentikasi, lakukan login terlebih dahulu dan gu
 6. Uji endpoint menggunakan Postman sebelum menghubungkannya ke frontend.
 7. Uji kembali halaman terkait setelah mengubah API atau schema database.
 
-## Catatan untuk Developer Selanjutnya
-
-Beberapa hal yang dapat menjadi pengembangan berikutnya:
+## Beberapa hal yang dapat menjadi pengembangan berikutnya:
 
 - Menambahkan pagination dan sorting pada daftar kategori dan produk.
 - Menambahkan upload gambar produk.

@@ -74,28 +74,24 @@ export default function DashboardPage() {
       title: "Total Produk",
       value: data?.totalProducts ?? 0,
       description: "Produk terdaftar",
-      icon: "📦",
-      color: "bg-blue-100 text-blue-700",
+      color: "bg-emerald-100 text-emerald-700",
     },
     {
       title: "Total Kategori",
       value: data?.totalCategories ?? 0,
       description: "Kategori tersedia",
-      icon: "🏷️",
-      color: "bg-purple-100 text-purple-700",
+      color: "bg-lime-100 text-lime-700",
     },
     {
       title: "Total Stok",
       value: data?.totalStock ?? 0,
       description: "Jumlah seluruh stok",
-      icon: "📊",
-      color: "bg-orange-100 text-orange-700",
+      color: "bg-teal-100 text-teal-700",
     },
     {
       title: "Produk Aktif",
       value: data?.activeProducts ?? 0,
       description: `${data?.inactiveProducts ?? 0} produk tidak aktif`,
-      icon: "✅",
       color: "bg-green-100 text-green-700",
     },
   ];
@@ -116,7 +112,7 @@ export default function DashboardPage() {
         <button
           onClick={loadDashboard}
           disabled={loading}
-          className="rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+          className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition hover:border-emerald-200 hover:bg-emerald-50 disabled:opacity-50"
         >
           {loading ? "Memuat..." : "↻ Refresh Data"}
         </button>
@@ -134,15 +130,13 @@ export default function DashboardPage() {
         {statistics.map((item) => (
           <div
             key={item.title}
-            className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm"
+            className="rounded-xl border border-emerald-100/70 bg-white p-5 shadow-sm shadow-emerald-900/5"
           >
             <div className="flex items-center justify-between">
               <p className="text-sm font-medium text-gray-500">
                 {item.title}
               </p>
-              <span className={`flex h-11 w-11 items-center justify-center rounded-xl text-xl ${item.color}`}>
-                {item.icon}
-              </span>
+              <span className={`h-2 w-10 rounded-full ${item.color}`} />
             </div>
 
             <p className="mt-4 text-3xl font-bold text-gray-900">
@@ -165,32 +159,30 @@ export default function DashboardPage() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Link
             href="/dashboard/products"
-            className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm transition hover:border-blue-300 hover:shadow-md"
+            className="rounded-xl border border-emerald-100/70 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md"
           >
-            <div className="mb-3 text-2xl">📦</div>
             <h3 className="font-semibold text-gray-900">
               Manajemen Produk
             </h3>
             <p className="mt-1 text-sm text-gray-500">
               Tambah, edit, hapus, dan cari produk.
             </p>
-            <p className="mt-4 text-sm font-medium text-blue-600">
+            <p className="mt-4 text-sm font-medium text-emerald-700">
               Kelola Produk →
             </p>
           </Link>
 
           <Link
             href="/dashboard/categories"
-            className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm transition hover:border-purple-300 hover:shadow-md"
+            className="rounded-xl border border-emerald-100/70 bg-white p-5 shadow-sm transition hover:border-emerald-300 hover:shadow-md"
           >
-            <div className="mb-3 text-2xl">🏷️</div>
             <h3 className="font-semibold text-gray-900">
               Manajemen Kategori
             </h3>
             <p className="mt-1 text-sm text-gray-500">
               Kelola kategori untuk mengelompokkan produk.
             </p>
-            <p className="mt-4 text-sm font-medium text-purple-600">
+            <p className="mt-4 text-sm font-medium text-emerald-700">
               Kelola Kategori →
             </p>
           </Link>
@@ -198,7 +190,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Recent Products */}
-      <div className="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm">
+      <div className="overflow-hidden rounded-xl border border-emerald-100/70 bg-white shadow-sm">
         <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
           <div>
             <h2 className="font-semibold text-gray-900">
@@ -211,7 +203,7 @@ export default function DashboardPage() {
 
           <Link
             href="/dashboard/products"
-            className="text-sm font-medium text-blue-600 hover:text-blue-800"
+            className="text-sm font-medium text-emerald-700 hover:text-emerald-800"
           >
             Lihat Semua →
           </Link>

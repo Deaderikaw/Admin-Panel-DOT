@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function DashboardLayout({
   children,
@@ -67,9 +68,18 @@ export default function DashboardLayout({
   ];
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
-      <aside className="w-64 bg-gray-900 p-6 text-white">
-        <h1 className="mb-10 text-xl font-bold">Admin Panel</h1>
+    <div className="flex min-h-screen bg-[#f6faf7]">
+    <aside className="w-64 border-r border-emerald-100 bg-white p-6 text-slate-800">
+      <div className="mb-10 flex items-center gap-3">
+        <Image
+          src="/logo.png"
+          alt="Logo Admin Panel"
+          width={40}
+          height={40}
+          className="h-10 w-10 object-contain"
+        />
+        <h1 className="text-xl font-bold tracking-tight">Admin Panel</h1>
+      </div>
 
         <nav className="space-y-2">
           {menus.map((menu) => (
@@ -78,8 +88,8 @@ export default function DashboardLayout({
               href={menu.href}
               className={`block rounded-lg px-4 py-3 text-sm transition ${
                 pathname === menu.href
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-300 hover:bg-gray-800"
+                  ? "bg-emerald-50 font-semibold text-emerald-700"
+                  : "text-slate-500 hover:bg-emerald-50 hover:text-emerald-700"
               }`}
             >
               {menu.label}
@@ -87,21 +97,21 @@ export default function DashboardLayout({
           ))}
         </nav>
 
-        <div className="mt-10 border-t border-gray-700 pt-5">
-          <p className="mb-3 text-sm text-gray-300">
+        <div className="mt-10 border-t border-slate-100 pt-5">
+          <p className="mb-3 text-sm text-slate-500">
             Login sebagai: {adminName}
           </p>
 
           <button
             onClick={handleLogout}
-            className="w-full rounded-lg bg-red-600 px-4 py-2 text-sm hover:bg-red-700"
+            className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition hover:border-red-200 hover:bg-red-50 hover:text-red-600"
           >
             Logout
           </button>
         </div>
       </aside>
 
-      <main className="min-w-0 flex-1 p-8">
+      <main className="min-w-0 flex-1 p-6 sm:p-8">
         {children}
       </main>
     </div>

@@ -175,7 +175,7 @@ export default function CategoriesPage() {
 
         <button
           onClick={openCreateForm}
-          className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-medium text-white hover:bg-blue-700"
+          className="rounded-lg bg-emerald-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-emerald-700"
         >
           + Tambah Kategori
         </button>
@@ -198,12 +198,12 @@ export default function CategoriesPage() {
           value={search}
           onChange={(event) => setSearch(event.target.value)}
           placeholder="Cari nama kategori..."
-          className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm outline-none focus:border-blue-500"
+          className="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
         />
 
         <button
           type="submit"
-          className="rounded-lg bg-gray-800 px-6 py-3 text-sm font-medium text-white hover:bg-gray-700"
+          className="rounded-lg bg-slate-800 px-6 py-3 text-sm font-medium text-white hover:bg-slate-700"
         >
           Cari
         </button>
@@ -214,15 +214,15 @@ export default function CategoriesPage() {
             setSearch("");
             fetchCategories("");
           }}
-          className="rounded-lg border border-gray-300 bg-white px-5 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
+          className="rounded-lg border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-600 hover:bg-emerald-50"
         >
           Reset
         </button>
       </form>
 
       {/* Table */}
-      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
-        <div className="border-b border-gray-200 px-6 py-4">
+      <div className="overflow-hidden rounded-xl border border-emerald-100/70 bg-white shadow-sm">
+        <div className="border-b border-emerald-100/70 px-6 py-4">
           <h2 className="font-semibold text-gray-800">
             Daftar Kategori
           </h2>
@@ -230,7 +230,7 @@ export default function CategoriesPage() {
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm">
-            <thead className="bg-gray-50 text-gray-600">
+            <thead className="bg-emerald-50/60 text-slate-500">
               <tr>
                 <th className="px-6 py-4">No.</th>
                 <th className="px-6 py-4">Nama Kategori</th>
@@ -271,7 +271,7 @@ export default function CategoriesPage() {
                       <div className="flex justify-center gap-2">
                         <button
                           onClick={() => openEditForm(category)}
-                          className="rounded-md bg-amber-100 px-3 py-2 text-xs font-medium text-amber-700 hover:bg-amber-200"
+                          className="rounded-md bg-emerald-50 px-3 py-2 text-xs font-medium text-emerald-700 hover:bg-emerald-100"
                         >
                           Edit
                         </button>
@@ -326,7 +326,7 @@ export default function CategoriesPage() {
                   placeholder="Masukkan nama kategori"
                   maxLength={100}
                   required
-                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none focus:border-blue-500"
+                  className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
                 />
               </div>
 
@@ -340,7 +340,7 @@ export default function CategoriesPage() {
                   onChange={(event) => setDescription(event.target.value)}
                   placeholder="Masukkan deskripsi kategori"
                   rows={4}
-                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none focus:border-blue-500"
+                  className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
                 />
               </div>
 
@@ -348,7 +348,7 @@ export default function CategoriesPage() {
                 <button
                   type="button"
                   onClick={closeForm}
-                  className="rounded-lg border border-gray-300 px-5 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  className="rounded-lg border border-slate-200 px-5 py-3 text-sm font-medium text-slate-600 hover:bg-emerald-50"
                 >
                   Batal
                 </button>
@@ -356,7 +356,7 @@ export default function CategoriesPage() {
                 <button
                   type="submit"
                   disabled={saving}
-                  className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-60"
+                  className="rounded-lg bg-emerald-600 px-5 py-3 text-sm font-medium text-white hover:bg-emerald-700 disabled:opacity-60"
                 >
                   {saving
                     ? "Menyimpan..."
